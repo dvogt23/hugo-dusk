@@ -1,5 +1,7 @@
 <footer class="post-footer">
-
+{{if .Site.Params.commentLink}}
+Please comment @github: <a href="{{.Site.Params.commentLink}} {{.Title}} " target="_BLANK">comment</a>
+{{end}}
 </footer>
 
 {{ if eq .Type "post" }}
