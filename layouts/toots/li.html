@@ -1,0 +1,12 @@
+<div class="content-item">
+  <div class="post-list">
+    <div class="tweet-header">
+      <img src="{{.Site.Params.mastodonAvatar}}" alt="" class="avator">
+      <div class="tweet-header-info">
+        {{.Site.Params.mastodonName}} <span>{{.Site.Params.mastodonAccount}}</span><span>{{ .Date.Format "Jan 2, 2006"
+          }}</span>
+        <div>{{ .Content }}</div>
+      </div>
+    </div>
+  </div>
+</div>

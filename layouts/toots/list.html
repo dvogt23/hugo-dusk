@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+{{if .Site.Params.tweetDescription}}
+<p> {{.Site.Params.tweetDescription}}<a href="{{.Site.Params.mastodon}}" target="_BLANK">{{.Site.Params.mastodonAccount}}</a> </p>
+{{end}}
+
+<div class="content-list">
+{{ range .Data.Pages.GroupByDate "2006" }}
+<div class="content-list-date">{{ .Key }}</div>
+  {{ range .Pages }}
+  {{ .Render "li"}}
+  {{ end }}
+{{ end }}
+</div>
+
+
+{{ partial "footer.html" . }}

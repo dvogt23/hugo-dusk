@@ -1,0 +1,2 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" style="width: 100%; max-width: 300px" />
